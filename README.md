@@ -25,7 +25,8 @@
      |   ZRX    | 0xe41d2489571d322189246dafa5ebde1f4699f498 | https://api.huobi.pro/market/history/trade?symbol=zrxeth&size=1  |
      |   MCO    | 0xb63b606ac810a52cca15e44bb630fd42d8d1d83d | https://api.huobi.pro/market/history/trade?symbol=mcoeth&size=1  |
 
-    * 交易所一般没有 BTC-ETH 的交易对，所有获取价格数据可以用 ETH-BTC。 
+    * 交易所一般没有 BTC-ETH(symbol 为 btceth) 的交易对，所有获取价格数据可以用 ETH-BTC(symbol 为 ethbtc)。
+  
      | currency |              contract-address              |                            price-api                            |
      | :------: | :----------------------------------------: | :-------------------------------------------------------------: |
      |   HBTC   | 0x0316EB71485b0Ab14103307bf65a021042c6d380 | https://api.huobi.pro/market/history/trade?symbol=ethbtc&size=1 |

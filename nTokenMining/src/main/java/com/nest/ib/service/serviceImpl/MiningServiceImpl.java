@@ -158,7 +158,7 @@ public class MiningServiceImpl implements MiningService {
                 BigInteger nowBlockNumber = web3j.ethBlockNumber().send().getBlockNumber();
                 if(nowBlockNumber.compareTo(blockNumber) > 0){
                     blockNumber = nowBlockNumber;
-                    gasPrice = new BigInteger(String.valueOf(new BigDecimal(gasPrice).multiply(new BigDecimal("1.2").setScale(0,BigDecimal.ROUND_DOWN))));
+                    gasPrice = new BigInteger(String.valueOf(new BigDecimal(gasPrice).multiply(new BigDecimal("1.2")).setScale(0,BigDecimal.ROUND_DOWN)));
                     String hash = sendERC20Offer(web3j, credentials, gasPrice, nonce, nowBlockNumber, latestOfferBlockNumber);
                     LOG.info("加速报价hash为：" + hash);
                 }

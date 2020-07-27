@@ -93,8 +93,8 @@ public class TheFirstUpdateTask implements ApplicationRunner {
         ERC20 erc20 = ERC20.load(ERC20_TOKEN_ADDRESS, web3j, credentials, gasPrice, new BigInteger("200000"));
         BigInteger approveValue = erc20.allowance(credentials.getAddress(), offerFactoryContractAddress).sendAsync().get();
         LOG.info("已经授权金额为：" + approveValue);
-        if(approveValue.compareTo(new BigInteger("100000000000000")) < 0){
-            String transactionHash = erc20.approve(offerFactoryContractAddress, new BigInteger("99999999999999999999")).sendAsync().get().getTransactionHash();
+        if(approveValue.compareTo(new BigInteger("100000000000000000000")) < 0){
+            String transactionHash = erc20.approve(offerFactoryContractAddress, new BigInteger("999999999999999999999999999999")).sendAsync().get().getTransactionHash();
             LOG.info("一次性授权hash：" + transactionHash);
         }
     }
